@@ -1,7 +1,7 @@
 import React from "react";
-import hero1 from "../assets/Images/hero1.png";
-import hero2 from "../assets/Images/hero2.png";
-import hero3 from "../assets/Images/hero3.png";
+import hero1 from "./assets/Images/hero1.png";
+import hero2 from "./assets/Images/hero2.png";
+import hero3 from "./assets/Images/hero3.png";
 import { FaArrowRight } from "react-icons/fa";
 
 function Hero() {
