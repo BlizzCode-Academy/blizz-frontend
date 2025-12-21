@@ -26,6 +26,8 @@ import svg1 from "../assets/Images/svg1.png";
 import svg2 from "../assets/Images/svg2.png";
 import svg3 from "../assets/Images/svg3.png";
 import svg4 from "../assets/Images/svg4.png";
+import courseImg from "../assets/Images/courseImg.png";
+import homeG from "../assets/Images/homeG.png"
 import "../styles/home.css";
 
 function Home() {
@@ -35,21 +37,42 @@ function Home() {
       desc: "Craft user-centric interfaces for web and mobile applications.",
       badge: "Beginner",
       duration: "3 Months",
-      img: "https://via.placeholder.com/120x84.png?text=UI+Design",
+      img: courseImg,
     },
     {
       title: "Frontend Web Development",
       desc: "Build responsive interfaces with HTML, CSS, JavaScript and React.",
       badge: "Intermediate",
       duration: "4 Months",
-      img: "https://via.placeholder.com/120x84.png?text=Frontend",
+      img: courseImg,
     },
     {
       title: "Backend Web Development",
       desc: "APIs, databases and server-side architecture with Node.js.",
       badge: "Intermediate",
       duration: "4 Months",
-      img: "https://via.placeholder.com/120x84.png?text=Backend",
+     img: courseImg,
+    },
+    {
+      title: "Mobile Development",
+      desc: "Become an expert in creating engaging and functional mobile applications.",
+      badge: "Beginner",
+      duration: "3 Months",
+      img: courseImg,
+    },
+     {
+      title: "Data Analysis",
+      desc: "Become an expert in creating engaging and functional mobile applications.",
+      badge: "Beginner",
+      duration: "3 Months",
+      img: courseImg,
+    },
+     {
+      title: "Graphic Design",
+      desc: "Develop visually compelling graphics that communicate and captivate audiences.",
+      badge: "Beginner",
+      duration: "3 Months",
+      img: courseImg,
     },
   ];
 
@@ -296,16 +319,16 @@ function Home() {
         </div>
 
         <div className="gallery-wrapper">
-          <button className="gallery-arrow left" aria-label="prev">
+          <button className="gallery-arrow left " aria-label="prev">
             <FaChevronLeft />
           </button>
           <div className="gallery-image">
             <img
-              src="https://via.placeholder.com/900x320.png?text=Community+Gallery"
+              src={homeG}
               alt="Community"
             />
           </div>
-          <button className="gallery-arrow right" aria-label="next">
+          <button className="gallery-arrow right " aria-label="next">
             <FaChevronRight />
           </button>
         </div>

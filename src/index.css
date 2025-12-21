@@ -30,7 +30,7 @@ body{
 }
 .course-card{
   background: linear-gradient(180deg, #FBFDFF, #FFFFFF);
-  border: 1px solid rgba(20,76,120,0.06);
+  border-top: 1px solid rgba(20,76,120,0.06);
   padding: 20px;
   border-radius: 14px;
   display: flex;
@@ -45,7 +45,7 @@ body{
 .badge{background:#EAF6FF;color:#145990;padding:6px 10px;border-radius:999px;font-weight:600}
 .duration{color:#7C7C7C;font-weight:500}
 .course-card-right{display:flex;align-items:center;gap:12px}
-.course-thumb{width:120px;height:84px;object-fit:cover;border-radius:10px}
+.course-thumb{width:120px;height:84px;object-fit:cover;border-radius:10px;margin-right: 100px}
 .course-action{width:44px;height:44px;border-radius:50%;border:1px solid rgba(20,76,120,0.12);background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
 .courses-cta{
   margin-top: 24px;
@@ -149,6 +149,10 @@ body{
   align-items: center;
   justify-content: center;
   cursor: pointer;
+ 
+}
+.left{
+  
 }
 
 /* Connect section */
@@ -527,6 +531,12 @@ left: 220px;
   text-align: center;
   max-width: 720px;
   margin-bottom: 48px;
+}
+.section-header h3{
+  font-size: 30px;
+}
+.section2-header p{
+  padding-top: 16px;
 }
 
 .section2-cards {
