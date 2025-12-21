@@ -20,7 +20,7 @@ import hero3 from "../assets/Images/hero3.png";
 import pathright from "../assets/Images/pathright.png";
 import pathleft from "../assets/Images/pathleft.png";
 import dashboard from "../assets/Images/dashboard.png";
-import partners from "../assets/Images/partners.png";
+import partners from "../assets/Images/Partners.png";
 
 import svg1 from "../assets/Images/svg1.png";
 import svg2 from "../assets/Images/svg2.png";
