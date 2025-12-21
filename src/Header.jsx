@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 import { FaBars, FaTimes, FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import './styles/header.css';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,41 +14,55 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">Blizzcode Logo</div>
-      <div className="mobile-logo">Blizzcode </div>
+      <div className="mobile-logo">Blizzcode</div>
+
       {/* HAMBURGER ICON */}
       <div className="hamburger" onClick={toggleMenu}>
         {isOpen ? <FaTimes /> : <FaBars />}
       </div>
-      ;
+
       <nav className={`navbar ${isOpen ? "nav-menu active" : "nav-menu"}`}>
         <ul>
           <li>
-            <a href="#home" className="neutral-500">
+            <Link to="/" className="neutral-500">
               Home
-            </a>
+            </Link>
           </li>
+
           <li>
-            <a href="#about" className="neutral-500">
+            <Link to="/about" className="neutral-500">
               About Us
-            </a>
+            </Link>
           </li>
+
           <li>
-            <a href="#Events" className="neutral-500">
+            <Link to="/events/responsive-webdesign" className="neutral-500">
               Events
-            </a>
+            </Link>
           </li>
-          <li>
-            <select className="neutral-500">
-              <option>Programs</option>
-              <option>Training Programs</option>
-              <option>Internships</option>
-            </select>
+
+          <li className="programs-menu">
+            <div className="programs-label neutral-500">Programs ▾</div>
+            <ul className="programs-dropdown">
+              <li>
+                <Link to="/programs/training-programs" className="neutral-500">
+                  Training Programs
+                </Link>
+              </li>
+              <li>
+                <Link to="/programs/internships" className="neutral-500">
+                  Internships
+                </Link>
+              </li>
+            </ul>
           </li>
+
           <li>
-            <a href="#contact" className="neutral-500">
+            <Link to="/contact" className="neutral-500">
               Contact Us
-            </a>
+            </Link>
           </li>
+
           <li>
             <a href="#Events" className="blizz-b-300">
               Already a Learner?
@@ -54,11 +70,12 @@ function Header() {
           </li>
 
           {/* LOGIN BUTTON ON MOBILE */}
-          <button className="btn mobile-login">
+          <button className=" mobile-login">
             Login <FaArrowRight />
           </button>
         </ul>
       </nav>
+
       <button className="btn desktop-login">
         Login <FaArrowRight style={{ marginRight: "8px" }} />
       </button>

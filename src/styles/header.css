@@ -1,0 +1,140 @@
+.header {
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between; /* Adjusted for better alignment */
+  align-items: center;
+  padding: 15px 40px;
+  position: relative;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #145990;
+  margin-right: 100px;
+}
+.mobile-logo {
+  display: none;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0; /* Removed unnecessary spacing */
+  align-items: center;
+}
+.navbar a {
+  text-decoration: none;
+  display: flex;
+  transition: color 0.3s ease;
+  padding: 10px 20px; /* Reduced padding for better spacing */
+}
+.navbar a:hover {
+  color: #145990; /* Adjusted hover color for consistency */
+}
+
+/* Buttons */
+.btn {
+  background-color: white;
+  color: #145990;
+  border: 1px solid #145990;
+  padding: 12px 36px;
+  border-radius: 36px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Dropdown menu adjustments */
+.programs-menu {
+  position: relative;
+}
+.programs-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #ffffff;
+  border: 1px solid rgba(20, 76, 120, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 8px 0;
+  display: none !important;
+  min-width: 220px;
+  z-index: 200;
+}
+
+.programs-menu:hover .programs-dropdown  {
+  display: block !important;
+}
+.mobile-login {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #145990;
+   
+}
+@media (min-width: 368px) and (max-width: 768px) {
+  
+  .header{
+    padding: 16px 8px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%
+  }
+  /* Show hamburger */
+
+  .hamburger {
+    display: block;
+    margin-left: 100px;
+  }
+   .desktop-login {
+    display: none;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 100px 0;
+    z-index: 100;
+  }
+  .nav-menu.active {
+    display: block;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-left: 0;
+    text-align: center;
+  }
+  .mobile-login {
+    display: block;
+    margin-top: 20px;
+  }
+  .desktop-login{
+    display: none;
+  }
+  .logo{
+    display: none;
+    
+  }
+  .mobile-logo{
+    display: block;
+    font-size: 24px;
+  font-weight: bold;
+  color: #145990;
+  margin: 0 24px;
+  }
+}

@@ -1,0 +1,22 @@
+/* Fonts, body, global reset */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
