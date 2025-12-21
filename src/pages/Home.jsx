@@ -13,8 +13,8 @@ import {
   FaChevronDown,
 } from "react-icons/fa";
 
-import hero1 from "../assets/images/hero1.png";
-import hero2 from "../assets/images/hero2.png";
+import hero1 from "../assets/Images/hero1.png";
+import hero2 from "../assets/Images/hero2.png";
 import hero3 from "../assets/Images/hero3.png";
 
 import pathright from "../assets/Images/pathright.png";
