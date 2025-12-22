@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { FaBars, FaTimes, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import './styles/header.css';
+import "./styles/header.css";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);

@@ -27,7 +27,8 @@ import svg2 from "../assets/Images/svg2.png";
 import svg3 from "../assets/Images/svg3.png";
 import svg4 from "../assets/Images/svg4.png";
 import courseImg from "../assets/Images/courseImg.png";
-import homeG from "../assets/Images/homeG.png"
+import homeG from "../assets/Images/homeG.png";
+import Blur from "../assets/Images/Blur.png";
 import "../styles/home.css";
 
 function Home() {
@@ -292,8 +293,13 @@ function Home() {
           Don't just take our word for it! Here's what our students are
           achieving
         </p>
+        <div className="testimonial-wrapper">
+          <button className="gallery-arrow left " aria-label="prev">
+            <FaChevronLeft />
+          </button>
 
         <div className="testimonial-card">
+        
           <blockquote>
             I came to Blizzcode with zero coding experience, and now I can
             confidently build websites thanks to the structured learning path
@@ -306,6 +312,11 @@ function Home() {
               <span className="author-role">Frontend Development</span>
             </div>
           </div>
+         
+        </div>
+         <button className="gallery-arrow right " aria-label="next">
+            <FaChevronRight />
+          </button>
         </div>
       </section>
 
@@ -337,26 +348,20 @@ function Home() {
       {/* Connect */}
       <section className="connect-section">
         <div className="connect-content">
-          <h3 className="blizz-b-950">Connect, Collaborate, and Thrive</h3>
-          <p className="neutral-500">
-            Meetups, team-based projects, and study cohorts — experience
-            learning with the Blizz community.
+          <h3>Connect, Collaborate, and Thrive</h3>
+          <p>
+            Network, learn from mentors, and stay motivated with our thriving community.
           </p>
-          <button className="btn explore-courses">View Events</button>
+          <button>View Events</button>
         </div>
 
-        <div className="connect-decor">
-          <div className="circle c1" />
-          <div className="circle c2" />
-          <div className="circle c3" />
-        </div>
       </section>
 
       {/* FAQ */}
       <section className="faq-section faq-grid">
         <div className="faq-left">
           <h3 className="blizz-b-950">Blizzcode Academy FAQs</h3>
-          <p className="neutral-500">
+          <p>
             Here are some frequently asked questions (FAQs) and answers for
             Blizzcode Academy
           </p>

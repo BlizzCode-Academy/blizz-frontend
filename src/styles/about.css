@@ -2,60 +2,153 @@
    About page styles
    ===================== */
 .about-page-container{
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 40px 20px 120px;
   position: relative;
   z-index:2;
-}
-
-.about-hero{
   display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:20px;
-  padding:56px 0;
-  position:relative;
+  flex-direction: column;
+  
+  
 }
 
-.about-hero-inner{flex:1;z-index:3}
+.about-hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+    margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   background-image: url("../assets/images/aboutHero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+.about-hero-inner {
+    position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 900px;      /* allows title to expand */
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* horizontally centers children */
+  text-align: center;    /* centers text inside */
+  padding: 0 20px; 
+}
+
+
+
 
 .about-title{
-  font-size:34px;
-  color:#145990;
-  margin:0 0 8px;
-  font-weight:700;
+  font-size: 72px;
+  font-weight: 700;
+  color: #145990;
+  margin-bottom: 8px;
+  line-height: 1.1;
+  text-align: center;
+  width: 100%;           /* lets it scale with parent */
+  max-width: 900px; 
 }
 
 .about-sub{
   color:#0F2942;
-  font-size:15px;
+  font-size:24px;
   margin:0;
+  font-weight: 500;
   line-height:1.6;
-  max-width:520px;
 }
 
-.about-hero-images{
-  position:absolute;
-  right:0;
-  top:-20px;
-  display:flex;
-  flex-direction:column;
-  gap:24px;
-  align-items:center;
-  z-index:2;
+.about-hero-images {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  z-index: 2;
 }
 
-.circle-img{
-  border-radius:50%;
-  object-fit:cover;
-  box-shadow:0 12px 30px rgba(20,76,120,0.12);
-  border:6px solid #fff;
+.img1 { top: 100px; right: -320px; width: 120px; height: 120px; }
+.img2 { top: 100px; left: -332px; width: 120px; height: 120px; }
+.img3 { top: 208px; left: -260px; width: 70px; height: 70px; }
+.img4 { top: 214px; right: -260px; width: 70px; height: 70px; }
+
+
+
+
+.img4, .img3 {  
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   object-fit: cover;
+   position: absolute;
 }
 
-.circle-img.img1{width:120px;height:120px}
-.circle-img.img2{width:88px;height:88px}
-.circle-img.img3{width:160px;height:160px}
+
+.img1, .img2 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  
+}
+
+.connect-section {
+  background-image: url("../assets/images/connect.png");
+  background-size: cover;        /* fills section like your reference */
+  background-position: center;   /* centers circles */
+  background-repeat: no-repeat;
+  color:#FFFFFF;
+  margin-top: 60px;
+  /* margin-bottom: 0; */
+  position: relative;
+  margin-bottom:-5%;
+
+  min-height: 320px;             /* KEY FIX */
+  /* padding: 60px 20px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;              /* prevents clipping artifacts */
+}
+
+.connect-content{
+  text-align: center;
+  z-index: 3;
+  
+
+}
+.connect-content h3{
+  font-size: 48px;
+  font-weight: 600;
+}
+.connect-content p{
+  margin: 0 auto;               /* KEY FIX */
+  padding-top: 16px;
+  padding-bottom: 48px;
+
+  max-width: 500px;             /* matches the design */
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+.connect-content button {
+  padding: 16px 24px;
+  border-radius: 36px;
+  border: none;
+  color: #0F2942;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+}
 
 /* subtle wavy top-right accent */
 .about-page-container::after{

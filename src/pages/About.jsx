@@ -1,4 +1,9 @@
 import React from "react";
+import hero1 from "../assets/images/hero1.png";
+import hero2 from "../assets/images/hero2.png";
+import hero3 from "../assets/Images/hero3.png";
+import aboutImg from "../assets/images/aboutImg.png"
+
 import '../styles/about.css';
 
 const team = [
@@ -42,27 +47,50 @@ export default function AboutPage() {
         <div className="about-hero-images">
           <img
             className="circle-img img1"
-            src="https://via.placeholder.com/96"
+            src={hero1}
             alt="student"
           />
           <img
             className="circle-img img2"
-            src="https://via.placeholder.com/72"
+            src={hero2}
             alt="student"
           />
           <img
             className="circle-img img3"
-            src="https://via.placeholder.com/120"
+            src={hero3}
+            alt="student"
+          />
+          <img
+            className="circle-img img4"
+            src={aboutImg}
             alt="student"
           />
         </div>
       </section>
 
       {/* Mission */}
+
       <section className="mission-section">
         <div className="mission-inner">
           <div className="mission-image">
-            <img src="https://via.placeholder.com/260" alt="mission" />
+            <img src={hero1} alt="mission" />
+          </div>
+          <div className="mission-text">
+            <h2>Our Mission</h2>
+            <p>
+              Our mission is to bridge the skills gap by providing a
+              comprehensive and accessible learning platform for individuals
+              seeking to enter or advance their careers in tech. We offer a
+              diverse range of training programs and resources designed to
+              empower learners of all backgrounds and experience levels.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="mission-section">
+        <div className="mission-inner">
+          <div className="mission-image">
+            <img src={hero1} alt="mission" />
           </div>
           <div className="mission-text">
             <h2>Our Mission</h2>
@@ -136,20 +164,15 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Connect / CTA banner */}
-      <section className="about-cta">
-        <div className="about-cta-decor">
-          <div className="cta-circle cta-c1" />
-          <div className="cta-circle cta-c2" />
-          <div className="cta-circle cta-c3" />
-        </div>
-        <div className="about-cta-inner">
+       <section className="connect-section">
+        <div className="connect-content">
           <h3>Connect, Collaborate, and Thrive</h3>
           <p>
-            Network, learn from mentors, and stay motivated with our thriving
-            community.
+            Network, learn from mentors, and stay motivated with our thriving community.
           </p>
-          <button className="btn cta-btn">Join Now ➜</button>
+          <button>View Events</button>
         </div>
+
       </section>
     </main>
   );

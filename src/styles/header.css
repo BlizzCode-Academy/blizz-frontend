@@ -1,10 +1,14 @@
+
+
+
 .header {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between; /* Adjusted for better alignment */
   align-items: center;
   padding: 15px 40px;
   position: relative;
+  flex-wrap: nowrap; /* Ensure items don’t wrap */
 }
 .logo {
   font-size: 24px;
