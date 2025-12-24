@@ -1,11 +1,11 @@
 import React from "react";
-import '../styles/contact.css';
+import "../styles/contact.css";
 
 export default function ContactPage() {
   return (
     <main className="contact-page">
       <section className="contact-hero">
-        <h1>Need Help? We're Here to Assist You</h1>
+        <h3>Need Help? We're Here to Assist You</h3>
         <p className="contact-sub">
           Having trouble with a course? Need technical assistance? Our support
           team is ready to help you.
@@ -14,17 +14,12 @@ export default function ContactPage() {
 
       <section className="contact-content">
         <div className="contact-left">
-          <h3>Let's Get in Touch!</h3>
-          <p className="neutral-500">
-            Have a question or need assistance? Reach out and we'll respond as
-            soon as possible.
+          <h3>Let's Get in <span>Touch!</span></h3>
+          <p>
+            Have a question or need assistance? Reach out to us via email,
+            phone, or by filling the contact form . We're eager to assist you.
           </p>
-
-          <div className="contact-decor">
-            <div className="decor-blob d1" />
-            <div className="decor-blob d2" />
-            <div className="decor-blob d3" />
-          </div>
+          <p>Nice hearing from you!</p>
         </div>
 
         <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
@@ -53,24 +48,13 @@ export default function ContactPage() {
             <textarea placeholder="How can we help?" rows={6} />
           </label>
 
-          <div style={{ textAlign: "right" }}>
+          <div>
             <button className="btn cta-btn" type="submit">
               Submit
             </button>
           </div>
         </form>
       </section>
-
-      <footer className="contact-footer">
-        <div className="contact-footer-inner">
-          <div className="logo">Blizzcode Logo</div>
-          <div className="footer-links">
-            <a href="#">About</a>
-            <a href="#">Programs</a>
-            <a href="#">Contact Us</a>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }
