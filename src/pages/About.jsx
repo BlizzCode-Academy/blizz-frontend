@@ -1,10 +1,10 @@
 import React from "react";
-import hero1 from "../assets/images/hero1.png";
-import hero2 from "../assets/images/hero2.png";
+import hero1 from "../assets/Images/hero1.png";
+import hero2 from "../assets/Images/hero2.png";
 import hero3 from "../assets/Images/hero3.png";
-import aboutImg from "../assets/images/aboutImg.png"
+import aboutImg from "../assets/Images/aboutImg.png";
 
-import '../styles/about.css';
+import "../styles/about.css";
 
 const team = [
   {
@@ -45,26 +45,10 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="about-hero-images">
-          <img
-            className="circle-img img1"
-            src={hero1}
-            alt="student"
-          />
-          <img
-            className="circle-img img2"
-            src={hero2}
-            alt="student"
-          />
-          <img
-            className="circle-img img3"
-            src={hero3}
-            alt="student"
-          />
-          <img
-            className="circle-img img4"
-            src={aboutImg}
-            alt="student"
-          />
+          <img className="circle-img img1" src={hero1} alt="student" />
+          <img className="circle-img img2" src={hero2} alt="student" />
+          <img className="circle-img img3" src={hero3} alt="student" />
+          <img className="circle-img img4" src={aboutImg} alt="student" />
         </div>
       </section>
 
@@ -164,15 +148,15 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Connect / CTA banner */}
-       <section className="connect-section">
+      <section className="connect-section">
         <div className="connect-content">
           <h3>Connect, Collaborate, and Thrive</h3>
           <p>
-            Network, learn from mentors, and stay motivated with our thriving community.
+            Network, learn from mentors, and stay motivated with our thriving
+            community.
           </p>
           <button>View Events</button>
         </div>
-
       </section>
     </main>
   );
