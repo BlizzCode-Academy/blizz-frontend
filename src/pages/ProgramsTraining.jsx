@@ -1,50 +1,132 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import EventHero from "../pages/EventHero";
+import EventIntro from "../pages/EventIntro";
+import ConnectComponent from "../pages/connectComponent";
+
+import trainingProImg from "../assets/Images/trainingProImg.png";
+
+
+import "../styles/trainingPrograms.css"; 
 
 export default function ProgramsTraining() {
+  const trainingPrograms = [
+    {
+      id: 1,
+      title: "Frontend Web Development",
+      level: "Beginner",
+      duration: "3 Months",
+      price: "₦120,000",
+      description: "Bring websites and applications to life with interactive coding.",
+      img: trainingProImg,
+    },
+    {
+      id: 2,
+      title: "UI/UX Design",
+      level: "Beginner",
+      duration: "3 Months",
+      price: "₦120,000",
+      description: "Craft user-centric web and mobile interfaces.",
+      img: trainingProImg,
+    },
+    {
+      id: 3,
+      title: "Backend Web Development",
+      level: "Beginner",
+      duration: "3 Months",
+      price: "₦120,000",
+      description: "Build the powerful foundation that drives websites and applications.",
+      img: trainingProImg,
+    },
+    {
+      id: 4,
+      title: "Mobile Development",
+      level: "Beginner",
+      duration: "3 Months",
+      price: "₦120,000",
+      description: "Become an expert in creating functional mobile applications.",
+     img: trainingProImg,
+    },
+    {
+      id: 5,
+      title: "Data Analysis",
+      level: "Beginner",
+      duration: "3 Months",
+      price: "₦120,000",
+      description: "Transform data into actionable insights and informed decisions.",
+      img: trainingProImg,
+    },
+    {
+      id: 6,
+      title: "Graphic Design",
+      level: "Beginner",
+      duration: "3 Months",
+      price: "₦120,000",
+      description: "Develop visually compelling graphics that communicate and captivate audiences.",
+     img: trainingProImg,
+    },
+     {
+      id: 7,
+      title: "Frontend Web Development",
+      level: "Beginner",
+      duration: "3 Months",
+      price: "₦120,000",
+      description: "Bring websites and applications to life with interactive coding.",
+      img: trainingProImg,
+    },
+    {
+      id: 8,
+      title: "UI/UX Design",
+      level: "Beginner",
+      duration: "3 Months",
+      price: "₦120,000",
+      description: "Craft user-centric web and mobile interfaces.",
+      img: trainingProImg,
+    },
+    {
+      id: 9,
+      title: "Backend Web Development",
+      level: "Beginner",
+      duration: "3 Months",
+      price: "₦120,000",
+      description: "Build the powerful foundation that drives websites and applications.",
+      img: trainingProImg,
+    },
+  ];
+
   return (
-    <main className="programs-page" style={{ padding: 40 }}>
-      <div className="container" style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <nav className="breadcrumbs" style={{ marginBottom: 12 }}>
-          <Link to="/">Home</Link>
-          <span style={{ margin: "0 8px" }}>/</span>
-          <span>Programs</span>
-          <span style={{ margin: "0 8px" }}>/</span>
-          <span>Training Programs</span>
-        </nav>
+    <div className="training-programs-page">
+      {/* Hero Section */}
+      <EventHero />
 
-        <h1 style={{ color: "#145990" }}>Training Programs</h1>
-        <p style={{ color: "#374151" }}>
-          Explore our available training programs.
-        </p>
+      {/* Intro Cards Section */}
+      <EventIntro />
 
-        <section style={{ marginTop: 24 }}>
-          <div
-            className="course-card"
-            style={{ display: "flex", gap: 16, padding: 20 }}
-          >
-            <div style={{ flex: 1 }}>
-              <h3 className="course-title">UI/UX Design</h3>
-              <p className="course-desc">
-                A comprehensive UI/UX program to help you design and prototype.
-              </p>
-              <div className="course-meta-row">
-                <span className="badge">3 months</span>
-                <span className="duration">Begins Oct, 2024</span>
-              </div>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <Link
-                to="/courses/responsive-webdesign"
-                className="btn blizz-b-400"
-              >
-                View Course
-              </Link>
-              <button className="explore-courses">Register</button>
-            </div>
+      {/* Training Programs Grid */}
+      <section className="programs-section">
+        <div className="programs-header">
+          <h2>Our Training Programs</h2>
+          <div className="search-bar">
+            <input type="text" placeholder="Search programs..." />
+            <button>🔍</button>
           </div>
-        </section>
-      </div>
-    </main>
+        </div>
+
+        <div className="programs-grid">
+          {trainingPrograms.map((program) => (
+            <div key={program.id} className="program-card">
+              <img src={program.img} alt={program.title} />
+              <h3>{program.title}</h3>
+              <p>{program.description}</p>
+              <div className="program-info">
+                <span>{program.level}</span>
+                <span>{program.duration}</span>
+              </div>
+              <div className="program-price">{program.price}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <ConnectComponent/>
+    </div>
   );
 }

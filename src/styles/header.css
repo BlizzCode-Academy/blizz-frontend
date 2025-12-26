@@ -54,7 +54,10 @@
 /* Dropdown menu adjustments */
 .programs-menu {
   position: relative;
+  cursor: pointer;
 }
+
+/* Dropdown now relies on React, so no :hover */
 .programs-dropdown {
   position: absolute;
   top: calc(100% + 8px);
@@ -64,14 +67,22 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 8px 0;
-  display: none !important;
   min-width: 220px;
   z-index: 200;
+  display: flex;
+  flex-direction: row;
 }
 
-.programs-menu:hover .programs-dropdown  {
-  display: block !important;
+.programs-dropdown li {
+  padding: 10px 20px;
 }
+
+.programs-dropdown li:hover {
+  background-color: rgba(20, 76, 120, 0.05);
+}
+
+/* Remove previous :hover rule entirely */
+
 .mobile-login {
   display: none;
 }

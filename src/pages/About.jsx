@@ -1,4 +1,6 @@
 import React from "react";
+import ConnectComponent from "../pages/connectComponent";
+
 import hero1 from "../assets/Images/hero1.png";
 import hero2 from "../assets/Images/hero2.png";
 import hero3 from "../assets/Images/hero3.png";
@@ -165,16 +167,7 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Connect / CTA banner */}
-       <section className="connect-section">
-        <div className="connect-content">
-          <h3>Connect, Collaborate, and Thrive</h3>
-          <p>
-            Network, learn from mentors, and stay motivated with our thriving community.
-          </p>
-          <button>View Events</button>
-        </div>
-
-      </section>
+        <ConnectComponent/>
     </main>
   );
 }
