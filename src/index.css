@@ -693,30 +693,7 @@ text-align: left;
 /* =====================
    About page styles
    ===================== */
-.about-page-container{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px 120px;
-}
-.about-hero{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:56px 0;position:relative; }
-.about-hero-inner{flex:1;z-index:3; background-color: yellow;}
-.about-title{font-size:34px;color:#145990;margin:0 0 8px;font-weight:700}
-.about-sub{color:#0F2942;font-size:15px;margin:0;line-height:1.6;max-width:520px}
-.about-hero-images{position:absolute;right:0;top:-20px;display:flex;flex-direction:column;gap:24px;align-items:center;z-index:2}
 
-/* subtle wavy top-right accent */
-.about-page-container::after{
-  content:"";
-  position:absolute;
-  right:-160px;
-  top:-120px;
-  width:420px;
-  height:420px;
-  background: radial-gradient(circle at 60% 30%, rgba(138,197,239,0.25), rgba(234,246,255,0.06) 50%, transparent 60%);
-  border-radius:50%;
-  transform: rotate(-10deg);
-  z-index:1;
-}
 
 .mission-section{padding:48px 0}
 .mission-inner{display:flex;align-items:center;gap:32px}
@@ -787,17 +764,7 @@ text-align: left;
 }
 
 /* subtle background accent shapes */
-.about-page-container::before{
-  content:"";
-  position: absolute;
-  right: -120px;
-  top: -60px;
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(circle at 30% 30%, rgba(138,197,239,0.25), rgba(234,246,255,0.08) 40%, transparent 60%);
-  border-radius: 50%;
-  z-index: 0;
-}
+
 .about-page-container{position:relative;z-index:2}
 
 /* Divider line that sits above the team */
@@ -940,11 +907,7 @@ text-align: left;
   .mission-inner{flex-direction:column}
   .values-grid{grid-template-columns:repeat(2,1fr)}
 }
-@media (max-width: 480px){
-  .values-grid{grid-template-columns:1fr}
-  .about-hero{flex-direction:column;align-items:flex-start}
-  .about-hero-images{order:2}
-}
+
 
 /* Contact page styles */
 .contact-page{max-width:1200px;margin:0 auto;padding:40px 20px 80px}

@@ -74,7 +74,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission */}
+      {/* About */}
 
       <section className="about-content-section">
         <div className="about-content-inner">
