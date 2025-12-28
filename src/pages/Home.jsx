@@ -12,6 +12,7 @@ import {
   FaChevronRight,
   FaChevronDown,
 } from "react-icons/fa";
+import ConnectComponent from "../pages/connectComponent";
 
 import hero1 from "../assets/Images/hero1.png";
 import hero2 from "../assets/Images/hero2.png";
@@ -52,7 +53,7 @@ function Home() {
       desc: "APIs, databases and server-side architecture with Node.js.",
       badge: "Intermediate",
       duration: "4 Months",
-     img: courseImg,
+      img: courseImg,
     },
     {
       title: "Mobile Development",
@@ -61,14 +62,14 @@ function Home() {
       duration: "3 Months",
       img: courseImg,
     },
-     {
+    {
       title: "Data Analysis",
       desc: "Become an expert in creating engaging and functional mobile applications.",
       badge: "Beginner",
       duration: "3 Months",
       img: courseImg,
     },
-     {
+    {
       title: "Graphic Design",
       desc: "Develop visually compelling graphics that communicate and captivate audiences.",
       badge: "Beginner",
@@ -109,9 +110,11 @@ function Home() {
     <main>
       {/* Hero */}
       <section className="hero">
-        <img src={hero1} alt="Hero 1" className="hero-img-1" />
-        <img src={hero2} alt="Hero 2" className="hero-img-2" />
-        <img src={hero3} alt="Hero 3" className="hero-img-3" />
+         <div className="hero-images">
+    <img src={hero1} alt="" className="hero-img-1" />
+    <img src={hero2} alt="" className="hero-img-2" />
+    <img src={hero3} alt="" className="hero-img-3" />
+  </div>
 
         <h1>Ignite your potential. Land your Dream Job</h1>
         <p>
@@ -298,23 +301,21 @@ function Home() {
             <FaChevronLeft />
           </button>
 
-        <div className="testimonial-card">
-        
-          <blockquote>
-            I came to Blizzcode with zero coding experience, and now I can
-            confidently build websites thanks to the structured learning path
-            and mentorship from my instructor. This course completely
-            transformed my career options!
-          </blockquote>
-          <div className="testimonial-author">
-            <div className="author-info">
-              <p> -- Amaka Okafor</p>
-              <span className="author-role">Frontend Development</span>
+          <div className="testimonial-card">
+            <blockquote>
+              I came to Blizzcode with zero coding experience, and now I can
+              confidently build websites thanks to the structured learning path
+              and mentorship from my instructor. This course completely
+              transformed my career options!
+            </blockquote>
+            <div className="testimonial-author">
+              <div className="author-info">
+                <p> -- Amaka Okafor</p>
+                <span className="author-role">Frontend Development</span>
+              </div>
             </div>
           </div>
-         
-        </div>
-         <button className="gallery-arrow right " aria-label="next">
+          <button className="gallery-arrow right " aria-label="next">
             <FaChevronRight />
           </button>
         </div>
@@ -334,10 +335,7 @@ function Home() {
             <FaChevronLeft />
           </button>
           <div className="gallery-image">
-            <img
-              src={homeG}
-              alt="Community"
-            />
+            <img src={homeG} alt="Community" />
           </div>
           <button className="gallery-arrow right " aria-label="next">
             <FaChevronRight />
@@ -346,17 +344,7 @@ function Home() {
       </section>
 
       {/* Connect */}
-      <section className="connect-section">
-        <div className="connect-content">
-          <h3>Connect, Collaborate, and Thrive</h3>
-          <p>
-            Network, learn from mentors, and stay motivated with our thriving community.
-          </p>
-          <button>View Events</button>
-        </div>
-
-      </section>
-
+      <ConnectComponent />
       {/* FAQ */}
       <section className="faq-section faq-grid">
         <div className="faq-left">

@@ -132,6 +132,7 @@ body{
   display: flex;
   align-items: center;
   gap: 12px;
+  
 }
 .gallery-image img{
   width: 100%;
