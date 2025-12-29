@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect } from "react";
+
 import ConnectComponent from "../pages/connectComponent";
 
 import hero1 from "../assets/Images/hero1.png";
@@ -41,6 +43,25 @@ const team = [
 ];
 
 export default function AboutPage() {
+
+
+  useEffect(() => {
+  const grid = document.querySelector(".values-grid");
+  const thumb = document.querySelector(".values-thumb");
+
+  if (!grid || !thumb) return;
+
+  const handleScroll = () => {
+    const scrollLeft = grid.scrollLeft;
+    const maxScroll = grid.scrollWidth - grid.clientWidth;
+    const progress = scrollLeft / maxScroll;
+
+    thumb.style.transform = `translateX(${progress * 300}%)`;
+  };
+
+  grid.addEventListener("scroll", handleScroll);
+  return () => grid.removeEventListener("scroll", handleScroll);
+}, []);
   return (
     <main className="about-page-container">
       <section className="about-hero">
@@ -111,35 +132,28 @@ export default function AboutPage() {
       {/* Values */}
       <section className="values-section">
         <h3 className="values-title">Our Values</h3>
-        <div className="values-grid">
-          <div className="value-card value-1">
-            <h4>Quality</h4>
-            <p>
-              We deliver well-structured programs, expert instruction, and
-              up-to-date curricula.
-            </p>
-          </div>
-          <div className="value-card value-2">
-            <h4>Accessibility</h4>
-            <p>
-              Affordable and readily available education, removing barriers for
-              aspiring learners.
-            </p>
-          </div>
-          <div className="value-card value-3">
-            <h4>Community</h4>
-            <p>
-              Our supportive learning environment where students can connect and
-              learn from each other.
-            </p>
-          </div>
-          <div className="value-card value-4">
-            <h4>Impact</h4>
-            <p>
-              We focus on measurable career outcomes and meaningful impact in
-              learners' lives.
-            </p>
-          </div>
+         <div className="values-carousel" id="valuesCarousel">
+    <div className="values-grid">
+      <div className="value-card value-1">
+        <h4>Quality</h4>
+        <p>We deliver well-structured programs, expert instruction...</p>
+      </div>
+      <div className="value-card value-2">
+        <h4>Accessibility</h4>
+        <p>Affordable and readily available education...</p>
+      </div>
+      <div className="value-card value-3">
+        <h4>Community</h4>
+        <p>Our supportive learning environment...</p>
+      </div>
+      <div className="value-card value-4">
+        <h4>Impact</h4>
+        <p>Measurable career outcomes and impact.</p>
+      </div>
+    </div>
+           <div className="values-indicator">
+      <span className="values-thumb" />
+    </div>
         </div>
       </section>
 
@@ -162,9 +176,13 @@ export default function AboutPage() {
                 <div className="team-name">{member.name}</div>
                 <div className="team-role">{member.role}</div>
               </div>
+              
             </div>
           ))}
         </div>
+         <div className="team-indicator">
+      <span className="team-thumb" />
+    </div>
       </section>
       {/* Connect / CTA banner */}
         <ConnectComponent/>

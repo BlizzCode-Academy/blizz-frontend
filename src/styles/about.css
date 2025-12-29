@@ -241,7 +241,9 @@
   
 
 }
-.team-title{color:#145990;margin:0 0 18px; text-align: center;}
+.team-title{color:#145990;margin:0 0 18px; text-align: center; font-size: 30px;  margin-bottom: 32px; /* increase spacing */
+  position: relative;
+  z-index: 3;}
 .team-list{display:flex;gap:28px;align-items:center;overflow-x:auto;padding:36px 8%;position:relative;z-index:2; gap: 100px;}
 .team-member{min-width:140px;flex:0 0 auto;text-align:center}
 .team-avatar-wrap{
@@ -283,6 +285,67 @@
 .cta-c1{background:rgba(255,255,255,0.12);transform:scale(1);filter:blur(6px)}
 .cta-c2{background:rgba(255,255,255,0.08);transform:scale(0.9)}
 .cta-c3{background:rgba(255,255,255,0.06);transform:scale(0.75)}
+
+.values-carousel {
+  position: relative;
+}
+
+.values-indicator {
+  width: 80%;
+  height: 4px;
+  margin: 24px auto 0;
+  background: rgba(20, 89, 144, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.values-thumb {
+  display: block;
+  height: 100%;
+  width: 25%; /* 4 cards → 25% */
+  background: #145990;
+  border-radius: inherit;
+  transform: translateX(0);
+  transition: transform 0.2s ease-out;
+}
+.team-carousel {
+  position: relative;
+  width: 100%;
+}
+
+.team-indicator {
+  width: 70%;
+  height: 4px;
+  margin: 24px auto 0;
+  background: rgba(20, 89, 144, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.team-thumb {
+  display: block;
+  height: 100%;
+  width: 33%; /* visible fraction */
+  background: #145990;
+  border-radius: inherit;
+  transform: translateX(0);
+  transition: transform 0.2s ease-out;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.values-grid,
+.team-list {
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE / Edge */
+}
+
+.values-grid::-webkit-scrollbar,
+.team-list::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari */
+}
+
+
+
 
 @media (max-width: 768px) {
 
@@ -326,11 +389,19 @@
     margin-top: 0;
   }
 
-  .about-text p {
+  .about-text h2,.mission-text h2{
+    text-align: center;
+    font-size: 30px;
+    color: #0F2942;
+    font-weight: 600;
+  }
+
+  .about-text p ,.mission-text p{
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.7;
-    text-align: left;
+    text-align: center;
+    color: #0F2942;
   }
 
   /* =====================
@@ -351,11 +422,6 @@
     text-align: center;
   }
 
-  .mission-text p {
-    font-size: 16px;
-    line-height: 1.7;
-    text-align: left;
-  }
 
   /* =====================
      VALUES → MOBILE CAROUSEL
@@ -375,30 +441,31 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 16px;
-    padding: 0 16px 16px;
-  }
-
-  .values-grid::-webkit-scrollbar {
-    display: none;
+    padding: 0 16px;
   }
 
   .value-card {
     flex: 0 0 85%;
     scroll-snap-align: center;
-    min-height: 220px;
   }
 
-  .value-card h4 {
-    font-size: 22px;
-  }
 
-  .value-card p {
-    font-size: 16px;
-  }
 
   /* =====================
      TEAM
   ===================== */
+  .team-list {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 24px 16px;
+  }
+
+  .team-member {
+    flex: 0 0 60%;
+    scroll-snap-align: center;
+  }
   .team-section {
     padding: 40px 16px;
   }
@@ -414,6 +481,7 @@
   .connect-section {
     padding: 60px 16px;
     min-height: auto;
+    margin-bottom: -20%;
   }
 
   .connect-content h3 {
