@@ -546,6 +546,43 @@ body {
 .faq-toggle-btn.open{transform:rotate(180deg);}
 .faq-answer{margin-top:12px;color:#4b5563;line-height:1.6; font-size: 16px;}
 /* Responsive adjustments for Home page */
+.connect-section {
+  width: 100%;
+  padding: 80px 20px;
+  background: #145990;
+  position: relative;
+  z-index: 5;
+}
+
+.connect-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+.connect-content h3 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.connect-content p {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.connect-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #fff;
+  color: #145990;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+
+
 @media (max-width: 768px) {
   html, body {
   overflow-x: hidden;

@@ -8,6 +8,7 @@ import Event from "./pages/Event";
 import Course from "./pages/Course";
 import ProgramsTraining from "./pages/ProgramsTraining";
 import ProgramsInternships from "./pages/ProgramsInternships";
+import EventDetails from "./pages/EventDetails";
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
           element={<ProgramsTraining />}
         />
         <Route path="/programs/internships" element={<ProgramsInternships />} />
-        <Route path="/courses/responsive-webdesign" element={<Course />} />
+        <Route path="/events/:slug" element={<EventDetails />} />
       </Routes>
       <Footer />
     </>

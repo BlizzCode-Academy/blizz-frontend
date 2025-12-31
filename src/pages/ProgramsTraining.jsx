@@ -96,7 +96,10 @@ export default function ProgramsTraining() {
   return (
     <div className="training-programs-page">
       {/* Hero Section */}
-      <EventHero />
+      <EventHero
+  title="Empower Your Future with Our Training Programs"
+  subtitle="Blizzcode Academy offers a comprehensive selection of training programs designed to help you thrive in today’s job market."
+/>
 
       {/* Intro Cards Section */}
       <EventIntro />

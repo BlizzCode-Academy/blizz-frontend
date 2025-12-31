@@ -1,5 +1,7 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
+
 import EventHero from "../pages/EventHero";
 import EventIntro from "../pages/EventIntro";
 import  eventImg1 from "../assets/Images/eventImg1.png";
@@ -16,6 +18,7 @@ export default function Event() {
       date: "Tuesday, August 18th",
       time: "12:00 PM WAT",
       img: eventImg3,
+       slug: "responsive-web-design",
     },
     {
       title: "Workshop: Introduction to Data Structures and Algorithms in Python",
@@ -33,7 +36,10 @@ export default function Event() {
 
   return (
     <main className="events-page">
-      <EventHero />
+     <EventHero
+  title="Level Up Your Skills with Our Tailored Upcoming Events"
+  subtitle="Fuel your tech journey and stay ahead of the curve with Blizzcode Academy’s engaging lineup of events!"
+/>
       <EventIntro />
 
       {/* Upcoming Events */}
@@ -41,20 +47,34 @@ export default function Event() {
         <h3 className="section-title">Our Upcoming Events</h3>
 
         <div className="events-grid">
-          {upcomingEvents.map((event, index) => (
-            <div className="event-card" key={index}>
-              <div className="event-image">
-                <img src={event.img} alt={event.title} />
-              </div>
-
-              <div className="event-content">
-                <h4>{event.title}</h4>
-                <p className="event-date">{event.date}</p>
-                <p className="event-time">{event.time}</p>
-              </div>
-            </div>
-          ))}
+  {upcomingEvents.map((event, index) => {
+    const Card = (
+      <div className="event-card">
+        <div className="event-image">
+          <img src={event.img} alt={event.title} />
         </div>
+
+        <div className="event-content">
+          <h4>{event.title}</h4>
+          <p className="event-date">{event.date}</p>
+          <p className="event-time">{event.time}</p>
+        </div>
+      </div>
+    );
+
+    return index === 0 ? (
+      <Link
+        to={`/events/${event.slug}`}
+        key={index}
+        className="event-link"
+      >
+        {Card}
+      </Link>
+    ) : (
+      <div key={index}>{Card}</div>
+    );
+  })}
+</div>
       </section>
 
       {/* Past Events */}

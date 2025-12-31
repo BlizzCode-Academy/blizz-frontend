@@ -193,42 +193,95 @@
 }
 
 /* ---------- Responsive ---------- */
+/* ===============================
+   MOBILE RESPONSIVENESS FIX
+   =============================== */
+
 @media (max-width: 768px) {
+
+  /* HERO */
+  .events-hero {
+    padding: 80px 16px 60px;
+  }
+
   .events-hero-inner h1 {
-    font-size: 2rem;
+    font-size: 24px;
+    line-height: 1.3;
   }
 
-  .programs-header h2 {
-    font-size: 1.75rem;
+  .events-hero-inner p {
+    font-size: 14px;
+    padding-top: 12px;
   }
 
-  .program-card img {
-    height: 150px;
-  }
-
-  .search-bar {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .search-bar input,
-  .search-bar button {
-    border-radius: 8px;
-    width: 100%;
+  /* BENEFITS / INTRO CARDS */
+  .events-benefits {
+    padding: 40px 16px;
   }
 
   .benefits-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
   }
-}
 
-@media (max-width: 480px) {
-  .events-hero-inner h1 {
-    font-size: 1.5rem;
+  .benefit-card {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .benefits-grid h3 {
+    font-size: 18px;
+  }
+
+  .benefits-grid p {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  /* PROGRAMS HEADER */
+  .programs-header {
+    align-items: flex-start;
   }
 
   .programs-header h2 {
-    font-size: 1.5rem;
+    font-size: 22px;
+  }
+
+  /* SEARCH BAR */
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+  }
+
+  /* PROGRAM GRID */
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* PROGRAM CARD */
+  .program-card img {
+    height: 140px;
+  }
+
+  .program-card h3 {
+    font-size: 18px;
+  }
+
+  .program-card p {
+    font-size: 14px;
+  }
+
+  .program-info {
+    font-size: 13px;
+  }
+
+  .program-price {
+    font-size: 14px;
   }
 }

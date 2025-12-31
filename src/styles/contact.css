@@ -27,8 +27,79 @@
 
 
 
-@media (max-width:900px){
-  .contact-content{flex-direction:column}
-  .contact-form{width:100%}
-  .contact-decor{position:static;display:flex;flex-direction:row;gap:12px;margin-top:18px}
+@media (max-width: 768px) {
+  /* Page padding */
+  .contact-page {
+    padding: 24px 16px 60px;
+  }
+
+  /* Hero section */
+  .contact-hero {
+    padding: 24px 0;
+    gap: 12px;
+  }
+
+  .contact-hero h3 {
+    font-size: 32px;
+    line-height: 1.3;
+    max-width: 100%;
+  }
+
+  .contact-hero .contact-sub {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  /* Stack layout */
+  .contact-content {
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 24px;
+  }
+
+  /* Left content */
+  .contact-left {
+    padding: 0;
+    text-align: center;
+  }
+
+  .contact-left h3 {
+    font-size: 22px;
+  }
+
+  .contact-left p {
+    font-size: 14px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Form */
+  .contact-form {
+    width: 100%;
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .contact-form label {
+    font-size: 13px;
+  }
+
+  .contact-form select,
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact-form textarea {
+    min-height: 120px;
+  }
+
+  /* Button */
+  .contact-form .cta-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
 }
